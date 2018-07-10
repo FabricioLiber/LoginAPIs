@@ -9,13 +9,6 @@ var Strategy = require('passport-twitter').Strategy;
 var session = require('express-session');
 
 /*config passport*/
-passport.use(new Strategy({
-	consumerKey: 'UBkW8KpQLjgZCpUyP5SfxW9OK',
-	consumerSecret: 'zfDaXTRjoQxhRN3CNMzPjkd4Up9B6eQJjKdCmZjGtY4cIQWpOw',
-	callbackURL: 'http://localhost:3000/twitter/return'
-},function (token, tokenSecret, profile, callback){
-  return callback(null, profile);
-}));
 
 passport.serializeUser(function(user, callback){
 	callback(null, user);
