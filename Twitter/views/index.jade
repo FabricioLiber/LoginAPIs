@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  if user
+    img(src="#{user.photos[0].value.replace('_normal','')}")
+    
+    p Hello #{user.username}
+    p id #{user.id}
+    p email #{user.displayName}
+    //p family name #{user.familyName}
+    p login com o #{user.provider}
+    
+
+  else
+    a(class ="btn btn-primary" href="/twitter/login") 
+                      | Login With Twitter
